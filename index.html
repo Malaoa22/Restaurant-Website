@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HAM&OUI FOOD | Luxury Dining Experience</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+        .hero {
+            background: url('luxury-dining.jpg') no-repeat center center/cover;
+            height: 100vh;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+        }
+        .hero-content {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px;
+            border-radius: 10px;
+        }
+        #menu {
+            background: #f8f9fa;
+            padding: 50px 20px;
+        }
+        #menu h3 {
+            margin-top: 30px;
+            color: #333;
+        }
+        #reservation-form {
+            max-width: 500px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background: #222;
+            color: #aaa;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">HAM&OUI FOOD</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#reservation">Reservation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content text-center">
+            <h1 class="display-3">HAM&OUI FOOD</h1>
+            <p class="lead">An exceptional dining experience blending luxury and exquisite flavors.</p>
+            <a href="#menu" class="btn btn-outline-light btn-lg">Discover Our Menu</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center">About Us</h2>
+            <p class="lead text-center">
+                At HAM&OUI FOOD, we offer more than just meals—we deliver memories. Every dish is crafted with precision, passion, and a commitment to excellence. Indulge in a luxury dining experience where every detail is tailored to perfection.
+            </p>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Our Menu</h2>
+            <h3>Drinks</h3>
+            <ul>
+                <li>Coca-Cola - $3</li>
+                <li>Coffee - $4</li>
+                <li>Milk - $2</li>
+                <li>Sparkling Water - $3</li>
+                <li>Nespresso - $5</li>
+            </ul>
+            <h3 class="mt-4">Signature Dishes</h3>
+            <ul>
+                <li>Grilled Salmon - $25</li>
+                <li>Classic Burger - $18</li>
+                <li>Margherita Pizza - $20</li>
+                <li>Chicken Nuggets - $12</li>
+                <li>French Fries - $6</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Reservation Section -->
+    <section id="reservation" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center">Reserve Your Table</h2>
+            <form id="reservation-form">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="date" class="form-label">Reservation Date</label>
+                    <input type="date" class="form-control" id="date" required>
+                </div>
+                <div class="mb-3">
+                    <label for="payment-method" class="form-label">Payment Method</label>
+                    <select class="form-control" id="payment-method">
+                        <option value="card">Card</option>
+                        <option value="cash">Cash</option>
+                    </select>
+                </div>
+                <div id="card-details" class="d-none">
+                    <label for="card-number" class="form-label">Card Number</label>
+                    <input type="text" class="form-control" id="card-number">
+                    <label for="card-expiry" class="form-label mt-2">Expiry Date</label>
+                    <input type="text" class="form-control" id="card-expiry">
+                    <label for="card-cvv" class="form-label mt-2">CVV</label>
+                    <input type="text" class="form-control" id="card-cvv">
+                </div>
+                <button type="submit" class="btn btn-dark w-100 mt-3">Reserve Now</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center">Contact Us</h2>
+            <p class="text-center">Phone: +1 (651) 352-8196 | Email: khalil.hamraoui06@gmail.com</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-center text-light py-3">
+        <p>&copy; 2025 HAM&OUI FOOD. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('payment-method').addEventListener('change', function() {
+            const cardDetails = document.getElementById('card-details');
+            if (this.value === 'card') {
+                cardDetails.classList.remove('d-none');
+            } else {
+                cardDetails.classList.add('d-none');
+            }
+        });
+    </script>
+</body>
+</html>
